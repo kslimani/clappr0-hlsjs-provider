@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "mkdir -p dist && browserify -s StreamrootHlsjs provider.js | uglifyjs > dist/clappr0-hlsjs-provider.js",
+    "build-webpack": "mkdir -p dist && node_modules/.bin/webpack",
     "lint": "eslint provider.js"
   },
   "author": {
@@ -17,11 +18,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "clappr": "^0.2.54",
-    "streamroot-hlsjs-p2p-bundle": "^3.0.0"
+    "clappr": "latest",
+    "streamroot-hlsjs-p2p-bundle": "^3.0.0",
+    "streamroot-hlsjs-p2p-wrapper": "^3.0.0",
+    "hls.js": "0.5.40"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
+    "babel-loader": "^6.0.0",
     "babel-eslint": "^6.0.4",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.9.0",
@@ -30,7 +34,8 @@
     "browserify-derequire": "^0.9.4",
     "eslint": "^2.12.0",
     "eslint-config-streamroot": "^1.0.1",
-    "uglify-js": "^2.6.2"
+    "uglify-js": "^2.6.2",
+    "webpack": "^1.13.1"
   },
   "browserify": {
     "transform": [
