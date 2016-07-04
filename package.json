@@ -8,7 +8,8 @@
     "url": "git@github.com:streamroot/clappr0-hlsjs-provider.git"
   },
   "scripts": {
-    "build": "mkdir -p dist && browserify -s StreamrootHlsjs provider.js | uglifyjs > dist/clappr0-hlsjs-provider.js",
+    "build:dev": "webpack",
+    "build:prod": "NODE_ENV=production webpack",
     "lint": "eslint provider.js"
   },
   "author": {
