@@ -8,6 +8,7 @@
     "url": "git@github.com:streamroot/clappr0-hlsjs-provider.git"
   },
   "scripts": {
+    "dev": "webpack-dev-server --content-base . --inline --hot",
     "build:dev": "webpack",
     "build:prod": "NODE_ENV=production webpack",
     "lint": "eslint provider.js"
@@ -34,7 +35,8 @@
     "eslint": "^2.12.0",
     "eslint-config-streamroot": "^1.0.1",
     "uglify-js": "^2.6.2",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "browserify": {
     "transform": [
