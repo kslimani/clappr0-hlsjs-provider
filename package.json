@@ -1,6 +1,6 @@
 {
   "name": "clappr0-hlsjs-provider",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Clappr plugin for Streamroot integrated with hls.js",
   "main": "provider.js",
   "repository": {
