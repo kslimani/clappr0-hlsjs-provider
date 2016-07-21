@@ -34,7 +34,9 @@ deployment:
         commands:
             # Generate dist
             - npm run build
-            - toolkit/add_banner.rb --file dist/$DIST_FILE --deploy_env $CIRCLE_BRANCH
+            - toolkit/add_banner.rb --file dist/$DIST_FILE
+                                    --deploy_env $CIRCLE_BRANCH
+                                    --dependencies streamroot-hlsjs-p2p-bundle
 
             # Upload dist
             - cp dist/$DIST_FILE $CIRCLE_ARTIFACTS/$DIST_FILE
@@ -51,18 +53,22 @@ deployment:
             # Cleanup
             - rm -rf dist
 
+            # Set version
+            - toolkit/set_version.rb --version $(toolkit/current_version.rb --beta ${CIRCLE_BUILD_NUM})
+
             # Generate dist
             - npm run build
             - toolkit/add_banner.rb --file dist/$DIST_FILE
                                     --deploy_env staging
-                                    --version $(toolkit/current_version.rb --beta ${CIRCLE_BUILD_NUM})
+                                    --version $(toolkit/current_version.rb)
+                                    --dependencies streamroot-hlsjs-p2p-bundle
             - cp dist/$DIST_FILE $CIRCLE_ARTIFACTS/$DIST_FILE
 
             # Upload version
             - toolkit/upload_to_s3.rb --bucket $S3_STAGING_BUCKET
                                       --region eu-west-1
                                       --file $CIRCLE_ARTIFACTS/$DIST_FILE
-                                      --destinations $CIRCLE_PROJECT_REPONAME/$(toolkit/current_version.rb --beta ${CIRCLE_BUILD_NUM})/$DIST_FILE
+                                      --destinations $CIRCLE_PROJECT_REPONAME/$(toolkit/current_version.rb)/$DIST_FILE
                                                      $CIRCLE_PROJECT_REPONAME/latest/$DIST_FILE
                                       --key $S3_KEY
                                       --secret $S3_SECRET
@@ -71,7 +77,7 @@ deployment:
             - toolkit/post_changelog.rb   --project $CIRCLE_PROJECT_REPONAME
                                           --env staging
                                           --subtitle $POST_SUBTITLE
-                                          --channel $SLACK_SUBTITLE
+                                          --channel $SLACK_CHANNEL
                                           --slack-token $SLACK_TOKEN
                                           --username $POST_USERNAME
                                           --icon-url $POST_PICTURE
@@ -103,6 +109,7 @@ deployment:
             - npm run build
             - toolkit/add_banner.rb --file dist/$DIST_FILE
                                     --version $(toolkit/current_version.rb)
+                                    --dependencies streamroot-hlsjs-p2p-bundle
             - cp dist/$DIST_FILE $CIRCLE_ARTIFACTS/$DIST_FILE
 
             # Upload version
@@ -120,7 +127,7 @@ deployment:
             - toolkit/post_changelog.rb   --project $CIRCLE_PROJECT_REPONAME
                                           --env preprod
                                           --subtitle $POST_SUBTITLE
-                                          --channel $SLACK_SUBTITLE
+                                          --channel $PREPROD_SLACK_CHANNEL
                                           --slack-token $SLACK_TOKEN
                                           --username $POST_USERNAME
                                           --icon-url $POST_PICTURE
