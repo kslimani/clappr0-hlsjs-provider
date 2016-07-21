@@ -3,10 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Dev]
+### Fixed
+- Tooling (circle.yml)
 
 ## [Unreleased]
-
-## [1.0.6] - 2016-06-16
 
 ## [1.0.4] - 2016-06-15
 ### Fixed
