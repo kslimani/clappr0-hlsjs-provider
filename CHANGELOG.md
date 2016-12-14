@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.36] - 2016-12-08
+### Updated
+- hlsjs-p2p-bundle to version ^4.0.0
+
 ## [1.1.0] - 2016-07-21
 ### Fixed
 - Tooling (circle.yml)
