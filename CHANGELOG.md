@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.40] - 2016-12-19
+### Fixed
+- copy hls.js config before passing it to hls.js (it assigns properties from default conf in place)
+
 ## [1.1.36] - 2016-12-08
 ### Updated
 - hlsjs-p2p-bundle to version ^4.0.0
