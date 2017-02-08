@@ -194,7 +194,7 @@ deployment:
             #
 
             # Generate manifest
-            - toolkit/build_manifest.rb --name "JW Player 7 hls.js provider"
+            - toolkit/build_manifest.rb --name "clappr0 hls.js provider"
                                         --version $(toolkit/current_version.rb)
                                         --platform "web"
                                         --artifacts ./$DIST_FILE
