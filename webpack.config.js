@@ -17,7 +17,7 @@ module.exports = {
         noParse: /node_modules\/streamroot-p2p\/p2p.js/,
         loaders: [{
             exclude: /node_modules/,
-            loader: 'babel',
+            loader: 'babel-loader',
             test: /\.js$/
         }]
     },
@@ -25,7 +25,6 @@ module.exports = {
         new webpack.DefinePlugin({
             __VERSION__: JSON.stringify(`v${version}`)
         }),
-        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(true),
         new webpack.optimize.UglifyJsPlugin()
     ]
