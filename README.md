@@ -5,12 +5,12 @@
 ##### build the project with :
 ```
 $ npm install
-$ npm run build-demo
+$ npm run build
 ```
 
 ##### start a http server at the root of the project
 ```
-$ npm start
+$ npm run dev
 ```
 
 ##### edit the demo page the add a valid streamrootKey instead of «YOUR_STREAMROOT_KEY».
@@ -19,4 +19,4 @@ The demo page is located in the `demo` directory.
 
 ##### open http://localhost:8080/demo/
 
-Note: the port number may vary if 8080 was already in use before you run `npm start`
+Note: the port number may vary if 8080 was already in use before you run `npm run dev`
