@@ -3,10 +3,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Dev]
-### Changed
-- Replace Browserify with Webpack.
 
 ## [Unreleased]
+
+## [1.2.0] - 2017-02-21
+### Changed
+- Replace Browserify with Webpack.
 
 ## [1.1.40] - 2016-12-19
 ### Fixed
