@@ -36,3 +36,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - CircleCI integration
 ### Changed
 - Webpack build replaced by browserify
+[1.2.1]: https://github.com/streamroot/clappr0-hlsjs-provider/compare/v1.2.0...v1.2.1
