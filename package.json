@@ -19,6 +19,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "lodash.assign": "^4.2.0",
     "streamroot-hlsjs-p2p-bundle": "^4.0.0"
   },
   "devDependencies": {
