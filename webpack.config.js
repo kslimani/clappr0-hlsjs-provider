@@ -21,6 +21,14 @@ module.exports = {
             test: /\.js$/
         }]
     },
+    externals: {
+        clappr: {
+            amd: 'clappr',
+            commonjs: 'clappr',
+            commonjs2: 'clappr',
+            root: 'Clappr'
+        }
+    },
     plugins: [
         new webpack.DefinePlugin({
             __VERSION__: JSON.stringify(`v${version}`)
