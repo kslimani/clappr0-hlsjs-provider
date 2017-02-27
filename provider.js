@@ -2,8 +2,14 @@ import { HLS } from 'clappr';
 import Hls from 'streamroot-hlsjs-p2p-bundle';
 
 class StreamrootHlsjs extends HLS {
-    get name() {
-        return 'streamroot_playback';
+    static canPlay = HLS.canPlay;
+
+    static get version() {
+        return __VERSION__;
+    }
+
+    static get name() {
+        return __NAME__;
     }
 
     _setupHls() {
@@ -24,7 +30,5 @@ class StreamrootHlsjs extends HLS {
         this._hls.attachMedia(this.el);
     }
 }
-
-StreamrootHlsjs.canPlay = HLS.canPlay;
 
 export default StreamrootHlsjs;

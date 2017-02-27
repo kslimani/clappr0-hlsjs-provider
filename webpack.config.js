@@ -31,6 +31,7 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
+            __NAME__: 'streamroot_playback',
             __VERSION__: JSON.stringify(`v${version}`)
         }),
         new webpack.optimize.OccurrenceOrderPlugin(true),
