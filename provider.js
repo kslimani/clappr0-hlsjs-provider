@@ -13,8 +13,7 @@ class StreamrootHlsjs extends HLS {
     }
 
     _setupHls() {
-        // Use underscore to copy hlsjsConfig. hls.js will add defaults in place in this object, and they still be there if we load a second video. This can cause bugs because of invalid config failfasts
-        let hlsjsConfigCopy = {
+        const hlsjsConfigCopy = {
             ...this._options.hlsjsConfig
         };
 
