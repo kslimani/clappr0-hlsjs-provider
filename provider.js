@@ -1,6 +1,5 @@
 import { HLS } from 'clappr';
 import Hls from 'streamroot-hlsjs-p2p-bundle';
-import assign from 'lodash.assign';
 
 class StreamrootHlsjs extends HLS {
     get name() {
@@ -9,7 +8,9 @@ class StreamrootHlsjs extends HLS {
 
     _setupHls() {
         // Use underscore to copy hlsjsConfig. hls.js will add defaults in place in this object, and they still be there if we load a second video. This can cause bugs because of invalid config failfasts
-        let hlsjsConfigCopy = assign({}, this._options.hlsjsConfig);
+        let hlsjsConfigCopy = {
+            ...this._options.hlsjsConfig
+        };
 
         this._hls = new Hls(hlsjsConfigCopy, this._options.p2pConfig);
         this._hls.on(Hls.Events.MEDIA_ATTACHED, () => {
