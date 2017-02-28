@@ -31,6 +31,9 @@ module.exports = {
             root: 'Clappr'
         }
     },
+    devServer: {
+        port: 8080,
+    },
     plugins: [
         new webpack.DefinePlugin({
             __NAME__: JSON.stringify('streamroot_playback'),

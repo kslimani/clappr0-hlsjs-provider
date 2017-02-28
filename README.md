@@ -13,4 +13,4 @@ $ npm run dev
 
 The demo page is located in the `demo` directory.
 
-**Open [http://localhost:8081/demo/](http://localhost:8081/demo/)**
+**Open [http://localhost:8080/demo/](http://localhost:8080/demo/)**
