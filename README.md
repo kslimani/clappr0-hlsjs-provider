@@ -1,17 +1,16 @@
-# Clappr Playback Plugin for Streamroot.io
+# Clappr Playback Plugin for Streamroot
 
 ## Testing locally
 
-##### build the project with :
-```
+**Build the project with:**
+
+```sh
 $ npm install
 $ npm run dev
 ```
 
-##### edit the demo page the add a valid streamrootKey instead of «YOUR_STREAMROOT_KEY».
+**Edit the demo page to add a valid streamrootKey instead of «YOUR_STREAMROOT_KEY».**
 
 The demo page is located in the `demo` directory.
 
-##### open http://localhost:8080/demo/
-
-Note: the port number may vary if 8080 was already in use before you run `npm run dev`
+**Open [http://localhost:8081/demo/](http://localhost:8081/demo/)**
