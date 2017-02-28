@@ -5,11 +5,6 @@
 ##### build the project with :
 ```
 $ npm install
-$ npm run build
-```
-
-##### start a http server at the root of the project
-```
 $ npm run dev
 ```
 
