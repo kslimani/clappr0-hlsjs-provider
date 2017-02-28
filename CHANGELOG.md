@@ -3,13 +3,15 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Dev]
+
+## [Unreleased]
+
+## [1.3.0] - 2017-02-28
 ### Fixed
 - Add missing `lodash.assign` dependency.
 
 ### Changed
 - Remove clappr dependency from npm scope and add it as an external.
-
-## [Unreleased]
 
 ## [1.2.0] - 2017-02-21
 ### Changed
@@ -42,3 +44,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Webpack build replaced by browserify
+[1.3.0]: https://github.com/streamroot/clappr0-hlsjs-provider/compare/v1.2.0...v1.3.0
