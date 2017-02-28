@@ -1,6 +1,8 @@
 {
    "globals": {
-       "Hls": true
+       "Hls": true,
+       "__NAME__": true,
+       "__VERSION__": true
    },
    "env":{
       "browser":true,

@@ -1,6 +1,6 @@
 {
   "name": "clappr0-hlsjs-provider",
-  "version": "1.2.2",
+  "version": "1.3.0-beta.0",
   "description": "Clappr plugin for Streamroot integrated with hls.js",
   "main": "provider.js",
   "repository": {
@@ -19,16 +19,17 @@
   },
   "license": "MIT",
   "dependencies": {
-    "clappr": "^0.2.54",
     "streamroot-hlsjs-p2p-bundle": "^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
-    "babel-eslint": "^6.0.4",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-es2015": "^6.9.0",
-    "eslint": "^2.12.0",
+    "eslint": "^3.16.1",
     "eslint-config-streamroot": "^1.0.1",
     "rimraf": "^2.5.4",
     "webpack": "^2.2.1",
